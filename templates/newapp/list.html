@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreKeeper</title>
+    {% block css %}<link rel="stylesheet" href="{% static 'css/mystyle.css' %}">{% endblock %}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">  
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+   <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+<div class="all">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">StoreKeeper</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'newapp:about' %}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'newapp:contact' %}">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ {% block body_block%}
+  <div class="container top">
+    <p><b>StoreKeeper- Your Own Shop Assistant</b></p>
+  </div>
+ 
+  <div class="jumbotron">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.item}}
+        {{form.quantity}}
+        <input type="submit" value="submit" class="btn btn-success">
+    </form>
+  </div>
+  <div class="list" id="list1">
+    {% for x in order %}
+    <div class="container1">
+    <span class="update" id="update1"> <a href="{% url 'newapp:update' x.id %}"><i class="fas fa-edit fa-2x"></i></a></span><span class="content" id="content1"> <b>Item</b>:&nbsp;{{x.item}} &nbsp;&nbsp; <b>Quantity:</b>&nbsp;{{x.quantity}}</span>
+    <span class="delete" id="delete1">  <a href="{% url 'newapp:delete' x.id %}"><i class="fas fa-trash-alt fa-2x"></i></a></span> <span class="complete" id="complete1")><a href="#"> <i class="far fa-check-circle fa-2x"></i></a></span>
+  </div>
+    {% endfor %}
+  </div>
+  <script src ="{%static 'js/index.js' %}"></script>
+  {%endblock%}
+  <div class="footer">
+    All rights reserved &nbsp;&nbsp;StoreKeeper Inc©
+  </div>
+    
+</body>
+</html>

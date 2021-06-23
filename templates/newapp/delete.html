@@ -1,0 +1,24 @@
+{% extends 'newapp/update.html' %}
+{% load static %}
+
+{% block body_block %}
+<div class="all">
+<div class="jumbotron">
+{% block titleblock %}
+<div class="title">
+<span>
+  Are you sure you want to <b>Delete</b> this item??,
+  This action is <b>irreversible</b>
+</span>
+</div>
+{% endblock %}
+  <form action="" method="post">
+      {% csrf_token %}
+      <div class="buttons">
+      <input type="submit" value="Yes,Delete" class="btn btn-success" name="submit">
+      <input type="submit" value= "No,Cancel" class="btn btn-danger" name="submit">
+    </div>
+  </form>
+</div>
+</div>
+{% endblock %}

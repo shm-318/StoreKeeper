@@ -1,0 +1,26 @@
+{% extends 'newapp/list.html' %}
+{% load static %}
+{% block css %}
+  <link href="{% static 'css/update.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block body_block %}
+<div class="all">
+<div class="jumbotron">
+{% block titleblock %}
+<div class="title">
+   Update Form
+</div>
+{% endblock %}
+{% block contentblock %}
+  <form action="" method="post">
+      {% csrf_token %}
+      {{form}}
+    <div class="buttons">
+      <input type="submit" value="Update" class="btn btn-success" name="submit">
+      <input type="submit" value="Cancel" class="btn btn-danger" name="submit">
+    </div>
+  </form>
+{% endblock %}
+</div>
+</div>
+{% endblock %}
