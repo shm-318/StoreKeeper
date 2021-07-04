@@ -1,0 +1,72 @@
+.jumbotron{
+    font-size:medium;
+    background: #EFEFBB;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #D4D3DD, #EFEFBB); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    height: auto;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+}
+.all{
+    margin: 0;
+    padding:0;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF8235, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: 100vh;
+    width: 100vw;
+}
+.form{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin:10%;
+    margin-top: 35px;
+    margin-bottom: 5%;
+    width: 80%;
+    font-weight: 300;
+    font-size: 1rem;
+}
+.navbar-nav > li{
+    padding-left:40px;
+    padding-right:40px;
+}
+.footer{
+    position: absolute;
+    left: 0;
+    top: 100vh;
+    width: 100vw;
+    margin-left: 0;
+    margin-right:0;
+    overflow-x: hidden;
+    height: 40px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+    font-size:1.5rem;
+}
+
+@media only screen and (max-width:768px)
+{
+    .jumbotron,.list{
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 20%;
+    }
+
+   
+    form{
+        display: grid;
+        width: 90%;
+
+    }
+   
+    .footer{
+        font-size: 1rem;
+    }
+}

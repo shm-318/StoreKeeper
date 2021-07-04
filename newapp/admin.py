@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(Order)
 admin.site.register(Contact)
+admin.site.register(UserProfileInfo)
