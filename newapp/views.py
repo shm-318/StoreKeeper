@@ -78,7 +78,7 @@ def list(request):
         form= OrderForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('list')
+        return redirect('newapp:list')
     
     context={'order':orders,'form':form}
 
@@ -94,10 +94,10 @@ def updatelist(request,pk):
         if request.POST.get('submit')=='Update':
             if form.is_valid():
                 form.save()
-                return redirect('list')
+                return redirect('newapp:list')
         elif request.POST.get('submit')=='Cancel':
             if form.is_valid():
-                return redirect('list')
+               return redirect('newapp:list')
     context={'form':form}
     return render(request,'newapp/update.html',context)
 
@@ -109,9 +109,9 @@ def deletelist(request,pk):
     if request.method=='POST':
         if request.POST.get('submit')=='Yes,Delete':
             task.delete()
-            return redirect('list')
+            return redirect('newapp:list')
         else:
-            return redirect('list')
+            return redirect('newapp:list')
     context={'task':task}
     return render(request,'newapp/delete.html',context)
 
