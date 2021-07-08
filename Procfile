@@ -1,1 +1,1 @@
-web: gunicorn newapp.wsgi
+web: gunicorn storekeeper.wsgi
