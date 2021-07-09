@@ -7,7 +7,7 @@
   font-size:medium;
   align-items:center;
   justify-content:center;
-  margin-top: 15%;
+  margin-top: 5%;
   margin-left: 25%;
   margin-right: 25%;
   border: 2px solid black;
@@ -49,7 +49,7 @@ form{
 background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #FF8235, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-  height: 70vh;
+  height: 85vh;
   width: 100vw;
 }
 .navbar-nav > li{

@@ -143,19 +143,14 @@ button a:hover {
   opacity: 0.5;
 }
 .footer {
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 100vh;
-  width: 100vw;
-  margin-left: 0;
-  margin-right: 0;
-  overflow-x: hidden;
-  height: 40px;
-  background-color: black;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  background-color:black;
   color: white;
   text-align: center;
-  padding-top: 5px;
-  font-size: 1.5rem;
 }
 
 @media only screen and (max-width: 768px) {

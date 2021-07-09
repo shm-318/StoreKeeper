@@ -1,0 +1,17 @@
+<div class="all">
+<div class="jumbotron" style="margin-top:20%">
+{% block titleblock %}
+<div class="title" style="margin-top:-10px;margin-left:-10px;font-size:1.5rem">
+   <b>Contact Us </b>
+</div>
+<form action="" method="POST">
+   {% csrf_token %}
+   {{form1}}
+   <input type="submit" value="Send Message" class="btn btn-success" style="margin-top:5px">
+</form>
+<div class="title" style="margin-left:-10px;font-size:1.5rem">
+   <b>Contribute on GitHub</b><br>
+   <a href="https://github.com/shm-318/StoreKeeper.git" target="_blank"><i class="fab fa-github fa-2x" style="color:black"></i></a>
+</div>
+</div>
+</div>
